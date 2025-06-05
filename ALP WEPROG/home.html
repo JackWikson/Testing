@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TIKET KONSER</h1>
+            <p>Dapatkan tiket untuk konser favorit Anda!</p>
+        </header>
+
+        <main>
+            <div class="concert-list" id="concertList">
+                <!-- Daftar konser akan dimuat dari JavaScript -->
+            </div>
+
+            <div class="booking-form">
+                <h2>Pesan Tiket</h2>
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="concert">Pilih Konser:</label>
+                        <select id="concert" name="concert" required>
+                            <option value="">-- Pilih Konser --</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ticketType">Jenis Tiket:</label>
+                        <select id="ticketType" name="ticketType" required>
+                            <option value="">-- Pilih Jenis --</option>
+                            <!-- Opsi akan diisi oleh JavaScript -->
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="quantity">Jumlah Tiket:</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+                        <p id="priceDisplay"></p>
+                        <p id="totalDisplay"></p>
+                    </div>
+
+                    <button type="submit" class="btn">Pesan Sekarang</button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
